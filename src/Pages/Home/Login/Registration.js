@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
+import { setToken } from '../../../Hooks/useToken';
 
 const Registration = () => {
 
@@ -30,7 +31,8 @@ const Registration = () => {
                     photoURL: imageData.data.url
                 }
                 createNewUserManually(data.email, data.password)
-                    .then(data => {
+                    .then(result => {
+                        setToken(result.user)
                         updateUser(userInfo)
                             .then(() => {                               
                                 toast.success("user created successfully")

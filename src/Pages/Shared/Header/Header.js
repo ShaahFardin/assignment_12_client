@@ -18,18 +18,18 @@ const Header = () => {
     <>
        <>
        <li>
-            <Link to='/'> <FontAwesomeIcon icon={faHome} className=''></FontAwesomeIcon>Home</Link>
+            <Link to='/'>Home</Link>
         </li>
-        <li><Link to='/about'><FontAwesomeIcon icon={faList} /> About</Link></li>
-        <li><Link to='/appoinment'><FontAwesomeIcon icon={faCalendarCheck} />Appointment</Link></li>
-        <li><Link to='/registration'><FontAwesomeIcon icon={faCalendarCheck} />Registration</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/appoinment'>Appointment</Link></li>
+        <li><Link to='/registration'>Registration</Link></li>
         </>
 
         {user?.uid ?
             <>
                 <div className="dropdown dropdown-end cursor-pointer">
                     <div tabIndex={0} className="avatar online">
-                        <div className="w-8 ml-3 mt-2 md:w-10 rounded-full">
+                        <div className="w-8 ml-3 mt-2 md:w-9 rounded-full">
                             <img src={user?.photoURL} alt='' />
                         </div>
                     </div>
@@ -63,13 +63,12 @@ const Header = () => {
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl tracking-wider">
                     <p className=' text-white'>
-                        <FontAwesomeIcon className='mr-3' icon={faCar} />
                         CARVANA 
                     </p>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal items-center text-white  p-0">
+                <ul className="menu menu-horizontal items-center text-white p-0">
                     {menuItems}
                 </ul>
             </div>
