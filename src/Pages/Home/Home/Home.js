@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../../Shared/Header/Header';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
-        <div>
-           <h1 className='text-5xl font-thin '> This is Hme</h1>
+        <div className='container mx-auto'>
+           <Banner></Banner>
         </div>
     );
 };

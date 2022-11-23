@@ -1,4 +1,4 @@
-import { faCalendarCheck, faHome, faHospitalUser, faList, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faCar, faHome, faHospitalUser, faList, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
@@ -16,18 +16,20 @@ const Header = () => {
 
     const menuItems = 
     <>
-        <li>
+       <>
+       <li>
             <Link to='/'> <FontAwesomeIcon icon={faHome} className=''></FontAwesomeIcon>Home</Link>
         </li>
         <li><Link to='/about'><FontAwesomeIcon icon={faList} /> About</Link></li>
         <li><Link to='/appoinment'><FontAwesomeIcon icon={faCalendarCheck} />Appointment</Link></li>
         <li><Link to='/registration'><FontAwesomeIcon icon={faCalendarCheck} />Registration</Link></li>
+        </>
 
         {user?.uid ?
             <>
                 <div className="dropdown dropdown-end cursor-pointer">
                     <div tabIndex={0} className="avatar online">
-                        <div className="w-8 ml-3 mt-2 md:w-12 rounded-full">
+                        <div className="w-8 ml-3 mt-2 md:w-10 rounded-full">
                             <img src={user?.photoURL} alt='' />
                         </div>
                     </div>
@@ -49,7 +51,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="navbar bg-primary flex justify-between">
+        <div className="navbar bg-primary flex justify-between text-sm p-n">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,10 +61,10 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">
-                    <p className='text-xl text-white font-'>
-                        <FontAwesomeIcon className='mr-3' icon={faHospitalUser} />
-                        Doctors-Portal
+                <Link to='/' className="btn btn-ghost normal-case text-xl tracking-wider">
+                    <p className=' text-white'>
+                        <FontAwesomeIcon className='mr-3' icon={faCar} />
+                        CARVANA 
                     </p>
                 </Link>
             </div>
