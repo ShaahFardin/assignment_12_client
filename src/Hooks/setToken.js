@@ -1,7 +1,8 @@
-export const setToken = user => {
+export const setToken = (user, role) => {
 
     const currentUser = {
-        email: user.email
+        email: user.email,
+        role: role
     }
 
     fetch(`http://localhost:5000/user/${user?.email}`, {

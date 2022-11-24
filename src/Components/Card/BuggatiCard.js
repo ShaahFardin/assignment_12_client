@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ buggatti }) => {
 
-    const { image, location, carName, originalPrice, resalePrice, sellerName, sellerVerified } = buggatti;
+    const { image, location, carName, originalPrice, resalePrice, sellerName, sellerVerified , usedYear} = buggatti;
 
     return (
         <div className='lg:w-60 md:w-1/2 p-4 w-full'>
@@ -32,13 +32,19 @@ const Card = ({ buggatti }) => {
                 <p className='mt-1 font-thin text-xs'> Resale Price :
                     <span className='font-bold'> ${resalePrice}</span>
                 </p>
-                <div className='flex justify-between mt-2'>
-                    <div className='flex text-xs mt-1'>
+                <div className='flex justify-around text-xs mt-1'>
+                    <div>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                     </div>
+                    <p className='text-xs '>Used {usedYear} year</p>
+                </div>
+                <div className='flex justify-between mt-2'>
+                    <button >
+                        <p className='text-xs text-orange-400 font-semibold'>Book Now</p>
+                    </button>
                     <div className='text-xs font-thin'>
                         <span className='mr-1'>{sellerName}</span>
                         <span>

@@ -24,7 +24,7 @@ const Card = ({ Volkswagen }) => {
                 <h3 className='text-gray-500 text-xs tracking-widest title-font mb-1'>
                     {location}
                 </h3>
-               
+
                 <h2 className='text-gray-900 title-font text-base font-medium'>
                     {carName}
                 </h2>
@@ -35,15 +35,15 @@ const Card = ({ Volkswagen }) => {
                     <span className='font-bold'> ${resalePrice}</span>
                 </p>
                 <div className='flex justify-center text-xs mt-1'>
-                       <div>
-                       <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                    <div>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                       </div>
+                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                     </div>
+                </div>
                 <div className='flex justify-between mt-2'>
-                  
+
                     <button >
                         <p className='text-xs text-orange-400 font-semibold'>Book Now</p>
                     </button>
@@ -55,7 +55,7 @@ const Card = ({ Volkswagen }) => {
                     </div>
                 </div>
                 <div>
-                    
+
                 </div>
             </div>
         </div>

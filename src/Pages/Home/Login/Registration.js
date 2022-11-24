@@ -11,6 +11,7 @@ const Registration = () => {
     const { createNewUserManually, updateUser, googleSignIn } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signupError, setSignupError] = useState('');
+    const [role, setRole] = useState('')
     const navigate = useNavigate()
 
     const handleSignUp = (data) => {
@@ -33,9 +34,10 @@ const Registration = () => {
                 }
                 createNewUserManually(data.email, data.password)
                     .then(result => {
-                       setToken(result.user)
+                        setToken(result.user, data.identity)
                         updateUser(userInfo)
                             .then(() => {
+                                console.log(`role of the user ${role}`);
                                 toast.success("user created successfully")
                                 navigate('/')
                             })
@@ -59,7 +61,7 @@ const Registration = () => {
 
     return (
         <div className='flex justify-center items-center'>
-            <div className='w-96 p-7'>
+            <div className='w-96 p-7 '>
                 <h1 className='text-4xl font-thin'>SignUp</h1>
                 <form className='my-5' onSubmit={handleSubmit(handleSignUp)}>
 
@@ -93,6 +95,15 @@ const Registration = () => {
 
                         {signupError && <p className='text-red-500'>{errors.password.message}</p>}
 
+                    </div>
+                    <div className='form-control w-full max-w-xs mt-5'>
+                        <select
+                        onSelect={event=>setRole(event.target.value)}
+                         {...register('identity', { required: "Confirm your identity" })} className="select select-bordered w-full max-w-xs">                            
+                            <option>User</option>
+                            <option>Seller</option>
+                            <option>Admin</option>
+                        </select>
                     </div>
 
                     <input className='btn btn-accent w-full mt-5' value="Signup" type="submit" />
