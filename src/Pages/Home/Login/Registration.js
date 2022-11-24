@@ -3,11 +3,12 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
-import { setToken } from '../../../Hooks/useToken';
+import { setToken } from '../../../Hooks/setToken';
+
 
 const Registration = () => {
 
-    const { createNewUserManually, updateUser } = useContext(AuthContext);
+    const { createNewUserManually, updateUser, googleSignIn } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signupError, setSignupError] = useState('');
     const navigate = useNavigate()
@@ -32,9 +33,9 @@ const Registration = () => {
                 }
                 createNewUserManually(data.email, data.password)
                     .then(result => {
-                        setToken(result.user)
+                       setToken(result.user)
                         updateUser(userInfo)
-                            .then(() => {                               
+                            .then(() => {
                                 toast.success("user created successfully")
                                 navigate('/')
                             })
@@ -42,6 +43,19 @@ const Registration = () => {
             })
     }
 
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                setToken(result.user)
+                toast.success("Google sign in successfull")
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
 
     return (
         <div className='flex justify-center items-center'>
@@ -81,15 +95,15 @@ const Registration = () => {
 
                     </div>
 
-                    <input className='btn btn-accent w-full mt-5' value="Login" type="submit" />
+                    <input className='btn btn-accent w-full mt-5' value="Signup" type="submit" />
                 </form>
                 <p>New to Doctors Portal?
-                    <Link to='/login' className='text-primary underline'>
+                    <Link to='/login' className='text-[#1A73E8] ml-2 underline'>
                         Login
                     </Link>
                 </p>
                 <div className="divider">OR</div>
-                <button className="btn btn-outline w-full text-black">Continue with Google</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-outline w-full text-black">Continue with Google</button>
             </div>
         </div>
     );

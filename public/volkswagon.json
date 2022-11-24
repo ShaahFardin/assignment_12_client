@@ -1,0 +1,89 @@
+[
+    {
+        "id":1,
+        "carName": "Volkswagen Atlas",
+        "brandName": "Volkswagen",
+        "originalPrice": 32999,
+        "resalePrice":26000,
+        "location": "Frankfurt, Germany",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2021",
+        "sellerName": "Belal Ahmed",
+        "image": "../src/Assets/volkswagon/volkswagon-1.jpg",
+        "description": "A midsize, family-friendly SUV, the Atlas can drive up to seven passengers and essentials on the Huntington roads. This SUV is more than capable just like Atlas, the titan who carries the Earth on his shoulders."
+    },
+    {
+        "id":2,
+        "carName": "Volkswagen ID.4",
+        "brandName": "Volkswagen",
+        "originalPrice": 30999,
+        "resalePrice":22000,
+        "location": "Daggendorf, Germany",
+        "usedYear": 5,
+        "sellerVerified": false,
+        "posted": "February 14, 2019",
+        "sellerName": "Thomas Muller",
+        "image": "../src/Assets/volkswagon/volkswagon-2.jpg",
+        "description": "After the ID.3., the ID.4 is the first all-electric SUV that has been making waves in the EV market. Intelligent design, identity, and visionary technologies: you can find the future in the ID.4."
+    },
+    {
+        "id":3,
+        "carName": "Volkswagen Arteon",
+        "brandName": "Volkswagen",
+        "originalPrice": 23999,
+        "resalePrice":20000,
+        "location": "Munchen, Germany",
+        "usedYear": 5,
+        "sellerVerified": true,
+        "posted": "September 14, 2022",
+        "sellerName": "Atik Ahmed",
+        "image": "../src/Assets/volkswagon/volkswagon-3.jpg",
+        "description": "The Arteon is breathtaking with its distinguished design and style, so it’s no wonder that its name derives from the Latin word, Artem, meaning art. Drivers and our team at Platinum Volkswagen who have seen the Arteon in person would agree its design is a work of art."
+    },
+    {
+        "id":4,
+        "carName": "Volkswagen Golf",
+        "brandName": "Volkswagen",
+        "originalPrice": 23999,
+        "resalePrice":20000,
+        "location": "Munchen, Germany",
+        "usedYear": 3,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Manuel Nauer",
+        "image": "../src/Assets/volkswagon/volkswagon-4.jpg",
+        "description": "Volkswagen named three vehicles— Golf, Jetta, and Passat— after natural occurrences. The Volkswagen Golf is named after the German word “goldstrom,” meaning gulf stream."
+
+    },
+    {
+        "id":5,
+        "carName": "Volkswagen Jetta",
+        "brandName": "Volkswagen",
+        "originalPrice": 19999,
+        "resalePrice":15000,
+        "location": "Milano, Itali",
+        "usedYear": 6,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Tony Soprano",
+        "image": "../src/Assets/volkswagon/volkswagon-5.jpg",
+        "description": "As for the Jetta, its German name means jet stream."
+
+    },
+    {
+        "id":6,
+        "carName": "Volkswagen Passat",
+        "brandName": "Volkswagen",
+        "originalPrice": 19999,
+        "resalePrice":15000,
+        "location": "Milano, Itali",
+        "usedYear": 6,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Tony Soprano",
+        "image": "../src/Assets/volkswagon/volkswagon-6.jpg",
+        "description": "The Passat name comes from the German word, passatwinde, which means “trade winds.”"
+
+    }
+]

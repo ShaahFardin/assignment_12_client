@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
-import { setToken, useToken } from '../../../Hooks/useToken';
+import { setToken } from '../../../Hooks/setToken';
+
 
 const Login = () => {
 

@@ -23,12 +23,13 @@ const AuthProvider = ({ children }) => {
 
     const logoutUser = () => {
         setLoading(true);
-        signOut(auth)
+        localStorage.removeItem('carvanaToken')
+        return signOut(auth)
     }
     const updateUser = (userInfo) => {
         return updateProfile(auth.currentUser, userInfo)
     }
-    const googleSignIn = ()=>{
+    const googleSignIn = () => {
         return signInWithPopup(auth, provider);
     }
 

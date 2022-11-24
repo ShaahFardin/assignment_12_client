@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const Header = () => {
-    const {user,logoutUser} = useContext(AuthContext)
+    const { user, logoutUser } = useContext(AuthContext)
 
     const handleSignOut = () => {
         logoutUser()
@@ -14,44 +14,44 @@ const Header = () => {
             .catch((error) => console.log(error.message))
     }
 
-    const menuItems = 
-    <>
-       <>
-       <li>
-            <Link to='/'>Home</Link>
-        </li>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/appoinment'>Appointment</Link></li>
-        <li><Link to='/registration'>Registration</Link></li>
+    const menuItems =
+        <>
+            <>
+                <li>
+                    <Link to='/'>Home</Link>
+                </li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/appoinment'>Appointment</Link></li>
+                <li><Link to='/registration'>Registration</Link></li>
+            </>
+
+            {user?.uid ?
+                <>
+                    <div className="dropdown dropdown-end cursor-pointer">
+                        <div tabIndex={0} className="avatar online">
+                            <div className="w-8 ml-3 mt-2 md:w-9 rounded-full">
+                                <img src={user?.photoURL} alt='' />
+                            </div>
+                        </div>
+                        <ul tabIndex={0}
+                            className="dropdown-content menu p-2  bg-[#1E2B47]  w-52">
+                            <li className='hover:bg-base-100 hover:text-black'><Link to='/reviews'>{user?.displayName}</Link></li>
+                            <li className='hover:bg-base-100 hover:text-black'><Link to='/dashboard'>Dashboard</Link></li>
+                            <li className='hover:bg-base-100 hover:text-black'><button onClick={handleSignOut} >SignOut</button></li>
+                        </ul>
+                    </div>
+
+                </>
+                :
+                <>
+                    <li><Link to='/login'> <FontAwesomeIcon icon={faRightFromBracket} /> Login</Link></li>
+                </>
+            }
+
         </>
 
-        {user?.uid ?
-            <>
-                <div className="dropdown dropdown-end cursor-pointer">
-                    <div tabIndex={0} className="avatar online">
-                        <div className="w-8 ml-3 mt-2 md:w-9 rounded-full">
-                            <img src={user?.photoURL} alt='' />
-                        </div>
-                    </div>
-                    <ul tabIndex={0} 
-                    className="dropdown-content menu p-2  bg-[#1E2B47]  w-52">
-                        <li className='hover:bg-base-100 hover:text-black'><Link to='/reviews'>{user?.displayName}</Link></li>
-                        <li className='hover:bg-base-100 hover:text-black'><Link to='/dashboard'>Dashboard</Link></li>
-                        <li className='hover:bg-base-100 hover:text-black'><button onClick={handleSignOut} >SignOut</button></li>
-                    </ul>
-                </div>
-
-            </>
-            :
-            <>
-                <li><Link to='/login'> <FontAwesomeIcon icon={faRightFromBracket} /> Login</Link></li>
-            </>
-        }
-
-    </>
-
     return (
-        <div className="navbar bg-primary flex justify-between text-sm p-n">
+        <div className="navbar bg-primary flex justify-between text-sm ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,7 +63,7 @@ const Header = () => {
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl tracking-wider">
                     <p className=' text-white'>
-                        CARVANA 
+                        CARVANA
                     </p>
                 </Link>
             </div>
