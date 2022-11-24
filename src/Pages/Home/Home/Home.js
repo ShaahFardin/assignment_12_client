@@ -29,8 +29,19 @@ const Home = () => {
                     <SearchForm />
                 </div>
                 <div className='flex-1'>
-                    <div>Category Card</div>
+                    {/* volskwagen car category */}
                     <div>
+                        <div className='flex justify-between px-4'>
+                            <p className='text-lg font-semibold'>Volkswagens</p>
+                            <Link>See all</Link>
+                        </div>
+                        <div className='flex flex-wrap gap-3'>
+                            {
+                                volkswagens.slice(0, 3).map((Volkswagen, i) => <Card key={i} Volkswagen={Volkswagen}></Card>)
+                            }
+                        </div>
+                    </div>
+                    <div className='mt-20'>
                         <div className='flex justify-between px-4'>
                             <p className='text-lg font-semibold'>Volkswagens</p>
                             <Link>See all</Link>
