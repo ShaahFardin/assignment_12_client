@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Card from '../../../Components/Card/Card';
 import SearchForm from '../../../Components/Form/SearchForm';
 import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
@@ -8,7 +10,7 @@ import Volkswagen from '../Categories/Volkswagen';
 const Home = () => {
 
     const [loading, setLoading] = useState(false);
-    const [Volkswagens, setVolkswagen] = useState([]);
+    const [volkswagens, setVolkswagen] = useState([]);
     useEffect(() => {
         fetch('volkswagon.json')
             .then(res => res.json())
@@ -24,11 +26,21 @@ const Home = () => {
             <Banner></Banner>
             <div className='md:flex justify-center gap-10 md:px-10 lg:px-20 mt-20'>
                 <div >
-                    <SearchForm/>
+                    <SearchForm />
                 </div>
                 <div className='flex-1'>
                     <div>Category Card</div>
-                    <div>Volkswagen card</div>
+                    <div>
+                        <div className='flex justify-between px-4'>
+                            <p>Volkswagens</p>
+                            <Link>See all</Link>
+                        </div>
+                        <div className='flex flex-wrap gap-4'>
+                            {
+                                volkswagens.slice(0, 3).map((Volkswagen, i) => <Card key={i} Volkswagen={Volkswagen}></Card>)
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

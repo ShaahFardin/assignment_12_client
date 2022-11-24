@@ -17,9 +17,7 @@ const Header = () => {
     const menuItems =
         <>
             <>
-                <li>
-                    <Link to='/'>Home</Link>
-                </li>
+                <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/appoinment'>Appointment</Link></li>
                 <li><Link to='/registration'>Registration</Link></li>
