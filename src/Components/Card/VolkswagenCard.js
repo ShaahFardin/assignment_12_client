@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const VolkswagenCard = ({ Volkswagen }) => {
+const VolkswagenCard = ({ Volkswagen, setBookCar }) => {
     const { image, location, carName, originalPrice, resalePrice,
          sellerName, sellerVerified, posted, description } = Volkswagen;
     return (
@@ -42,9 +42,9 @@ const VolkswagenCard = ({ Volkswagen }) => {
                 </div>
 
                 <div className='flex justify-between mt-2'>
-
-                    <button >
-                        <p className='text-xs bg-red-500 px-3 py-1 rounded-sm text-white font-semibold'>Book Now</p>
+                    <button onClick={()=>setBookCar(Volkswagen)}>
+                        <label htmlFor="Booking-modal" 
+                        className="text-xs cursor-pointer bg-red-500 px-3 py-1 rounded-sm text-white font-semibold">Book Now</label>
                     </button>
                     <div className='flex justify-center text-xs mt-1'>
                         <div>
@@ -60,9 +60,6 @@ const VolkswagenCard = ({ Volkswagen }) => {
                             {sellerVerified && <FontAwesomeIcon className='text-blue-500' icon={faCircleCheck}></FontAwesomeIcon>}
                         </span>
                     </div>
-                </div>
-                <div>
-
                 </div>
             </div>
         </div>

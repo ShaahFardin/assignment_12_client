@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import BookingModal from '../../Components/BookingModal/BookingModal';
 import VolkswagenCard from '../../Components/Card/VolkswagenCard';
 
 const AllVolkswagen = () => {
 
     const [volkswagens, setVolkswagen] = useState([]);
+    const [bookCar, setBookCar] = useState(null);
+    
     useEffect(() => {
         fetch('http://localhost:5000/category/volkswagen')
             .then(res => res.json())
@@ -18,9 +21,13 @@ const AllVolkswagen = () => {
             <h1 className='text-xl mt-5 text-start font-medium lg:px-48'>Volkswagen</h1>
             <div className='grid grid-cols-1 gap-3 mb-20'>
                 {
-                    volkswagens.map((Volkswagen, i) => <VolkswagenCard Volkswagen={Volkswagen}></VolkswagenCard>)
+                    volkswagens.map((Volkswagen, i) => 
+                    <VolkswagenCard setBookCar={setBookCar} Volkswagen={Volkswagen}></VolkswagenCard>)
                 }
             </div>
+            {
+                bookCar && <BookingModal bookCar={bookCar}></BookingModal>
+            }
         </div>
     );
 };

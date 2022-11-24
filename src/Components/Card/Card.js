@@ -1,8 +1,7 @@
-import { faCircleCheck, faStar, faTabletButton } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import car from '../../Assets/volkswagon/volkswagon-1.jpg'
 
 const Card = ({ Volkswagen }) => {
 
@@ -11,11 +10,11 @@ const Card = ({ Volkswagen }) => {
     return (
         <div className='lg:w-60 md:w-1/2 p-4 w-full'>
             <Link
-                to='/coming-soon'
+                
                 className='block relative h-32 rounded overflow-hidden'
             >
                 <img
-                    alt='e-commerce'
+                    alt=''
                     className='object-cover object-center w-full h-full block'
                     src={image}
                 />
@@ -34,14 +33,6 @@ const Card = ({ Volkswagen }) => {
                 <p className='mt-1 font-thin text-xs'> Resale Price :
                     <span className='font-bold'> ${resalePrice}</span>
                 </p>
-                {/* <div className='flex justify-center text-xs mt-1'>
-                    <div>
-                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                    </div>
-                </div> */}
                 <div className='flex justify-between mt-2'>
 
                     <button >
