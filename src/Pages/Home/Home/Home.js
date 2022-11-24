@@ -59,7 +59,7 @@ const Home = () => {
                     {/* Buggati car category */}
                     <div className='mt-20'>
                         <div className='flex justify-between px-4'>
-                            <p className='text-lg font-semibold'>Volkswagens</p>
+                            <p className='text-lg font-semibold'>Buggati</p>
                             <Link>See all</Link>
                         </div>
                         <div className='flex flex-wrap gap-3'>

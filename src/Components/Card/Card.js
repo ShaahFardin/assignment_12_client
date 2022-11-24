@@ -24,6 +24,7 @@ const Card = ({ Volkswagen }) => {
                 <h3 className='text-gray-500 text-xs tracking-widest title-font mb-1'>
                     {location}
                 </h3>
+               
                 <h2 className='text-gray-900 title-font text-base font-medium'>
                     {carName}
                 </h2>
@@ -33,19 +34,28 @@ const Card = ({ Volkswagen }) => {
                 <p className='mt-1 font-thin text-xs'> Resale Price :
                     <span className='font-bold'> ${resalePrice}</span>
                 </p>
-                <div className='flex justify-between mt-2'>
-                    <div className='flex text-xs mt-1'>
+                <div className='flex justify-center text-xs mt-1'>
+                       <div>
+                       <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                       </div>
                     </div>
+                <div className='flex justify-between mt-2'>
+                  
+                    <button >
+                        <p className='text-xs text-orange-400 font-semibold'>Book Now</p>
+                    </button>
                     <div className='text-xs font-thin'>
                         <span className='mr-1'>{sellerName}</span>
                         <span>
                             {sellerVerified && <FontAwesomeIcon className='text-blue-500' icon={faCircleCheck}></FontAwesomeIcon>}
                         </span>
                     </div>
+                </div>
+                <div>
+                    
                 </div>
             </div>
         </div>
