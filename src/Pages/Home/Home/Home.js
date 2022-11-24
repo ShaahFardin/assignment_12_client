@@ -23,7 +23,7 @@ const Home = () => {
     },[])
 
     useEffect(() => {
-        fetch('buggatti.json')
+        fetch('http://localhost:5000/category/buggatti')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
