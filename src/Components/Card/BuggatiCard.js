@@ -32,7 +32,7 @@ const Card = ({ buggatti }) => {
                 <p className='mt-1 font-thin text-xs'> Resale Price :
                     <span className='font-bold'> ${resalePrice}</span>
                 </p>
-                <div className='flex justify-around text-xs mt-1'>
+                {/* <div className='flex justify-around text-xs mt-1'>
                     <div>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
@@ -40,7 +40,7 @@ const Card = ({ buggatti }) => {
                         <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
                     </div>
                     <p className='text-xs '>Used {usedYear} year</p>
-                </div>
+                </div> */}
                 <div className='flex justify-between mt-2'>
                     <button >
                         <p className='text-xs text-orange-400 font-semibold'>Book Now</p>

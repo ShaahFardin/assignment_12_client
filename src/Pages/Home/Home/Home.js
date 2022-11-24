@@ -14,7 +14,7 @@ const Home = () => {
     const [buggattis, setBuggattis] = useState([]);
     const [volkswagens, setVolkswagen] = useState([]);
     useEffect(() => {
-        fetch('volkswagon.json')
+        fetch('http://localhost:5000/category/volkswagen')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
