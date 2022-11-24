@@ -1,38 +1,54 @@
-import { StarIcon } from '@heroicons/react/24/solid'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { faCircleCheck, faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BuggatiCard = () => {
+const Card = ({ buggatti }) => {
+
+    const { image, location, carName, originalPrice, resalePrice, sellerName, sellerVerified } = buggatti;
+
     return (
         <div className='lg:w-60 md:w-1/2 p-4 w-full'>
-        <Link
-          to={`/service-details`}
-          className='block relative h-48 rounded overflow-hidden'
-        >
-          <img
-            alt='home-img'
-            className='object-cover object-center w-full h-full block'
-            src='https://i.ibb.co/YPXktqs/Home1.jpg'
-          />
-        </Link>
-        <div className='mt-4'>
-          <h3 className='text-gray-500 text-xs tracking-widest title-font mb-1'>
-            Dhaka, Bangladesh
-          </h3>
-          <h2 className='text-gray-900 title-font text-lg font-medium'>
-            Huge Apartment with 4 bedrooms
-          </h2>
-          <p className='mt-1'>$34 per person</p>
-          <div className='flex mt-1'>
-            <StarIcon className='h3 w-3 text-green-500' />
-            <StarIcon className='h3 w-3 text-green-500' />
-            <StarIcon className='h3 w-3 text-green-500' />
-            <StarIcon className='h3 w-3 text-green-500' />
-            <StarIcon className='h3 w-3 text-green-500' /> <span>64</span>
-          </div>
+            <Link
+                to='/coming-soon'
+                className='block relative h-32 rounded overflow-hidden'
+            >
+                <img
+                    alt='e-commerce'
+                    className='object-cover object-center w-full h-full block'
+                    src={image}
+                />
+            </Link>
+            <div className='mt-4'>
+                <h3 className='text-gray-500 text-xs tracking-widest title-font mb-1'>
+                    {location}
+                </h3>
+                <h2 className='text-gray-900 title-font text-base font-medium'>
+                    {carName}
+                </h2>
+                <p className='font-thin text-xs'>
+                    Original price <span className='mt-1 '>${originalPrice}</span>
+                </p>
+                <p className='mt-1 font-thin text-xs'> Resale Price :
+                    <span className='font-bold'> ${resalePrice}</span>
+                </p>
+                <div className='flex justify-between mt-2'>
+                    <div className='flex text-xs mt-1'>
+                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
+                    </div>
+                    <div className='text-xs font-thin'>
+                        <span className='mr-1'>{sellerName}</span>
+                        <span>
+                            {sellerVerified && <FontAwesomeIcon className='text-blue-500' icon={faCircleCheck}></FontAwesomeIcon>}
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     );
 };
 
-export default BuggatiCard;
+export default Card;
