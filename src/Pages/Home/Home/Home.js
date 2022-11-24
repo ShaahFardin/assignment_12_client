@@ -47,7 +47,7 @@ const Home = () => {
                         {/* volskwagen car category */}
                         <div className='flex justify-between px-4'>
                             <p className='text-lg font-semibold'>Volkswagens</p>
-                            <Link>See all</Link>
+                            <Link to='/category/volkswagen'>See all</Link>
                         </div>
                         <div className='flex flex-wrap gap-3'>
                             {
