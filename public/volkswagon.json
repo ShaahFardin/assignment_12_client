@@ -10,7 +10,7 @@
         "sellerVerified": true,
         "posted": "January 4, 2021",
         "sellerName": "Belal Ahmed",
-        "image": "../src/Assets/volkswagon/volkswagon-1.jpg",
+        "image": "https://i.ibb.co/crrJ5QZ/volkswagon-1.jpg",
         "description": "A midsize, family-friendly SUV, the Atlas can drive up to seven passengers and essentials on the Huntington roads. This SUV is more than capable just like Atlas, the titan who carries the Earth on his shoulders."
     },
     {
@@ -24,7 +24,7 @@
         "sellerVerified": false,
         "posted": "February 14, 2019",
         "sellerName": "Thomas Muller",
-        "image": "../src/Assets/volkswagon/volkswagon-2.jpg",
+        "image": "https://i.ibb.co/LRc0NBt/volkswagon-2.jpg",
         "description": "After the ID.3., the ID.4 is the first all-electric SUV that has been making waves in the EV market. Intelligent design, identity, and visionary technologies: you can find the future in the ID.4."
     },
     {
@@ -38,7 +38,7 @@
         "sellerVerified": true,
         "posted": "September 14, 2022",
         "sellerName": "Atik Ahmed",
-        "image": "../src/Assets/volkswagon/volkswagon-3.jpg",
+        "image": "https://i.ibb.co/bLLfxN9/volkswagon-3.jpg",
         "description": "The Arteon is breathtaking with its distinguished design and style, so it’s no wonder that its name derives from the Latin word, Artem, meaning art. Drivers and our team at Platinum Volkswagen who have seen the Arteon in person would agree its design is a work of art."
     },
     {
@@ -52,7 +52,7 @@
         "sellerVerified": true,
         "posted": "September 14, 2021",
         "sellerName": "Manuel Nauer",
-        "image": "../src/Assets/volkswagon/volkswagon-4.jpg",
+        "image": "https://i.ibb.co/zJVGdjz/volkswagon-4.jpg",
         "description": "Volkswagen named three vehicles— Golf, Jetta, and Passat— after natural occurrences. The Volkswagen Golf is named after the German word “goldstrom,” meaning gulf stream."
 
     },
@@ -67,7 +67,7 @@
         "sellerVerified": true,
         "posted": "September 14, 2021",
         "sellerName": "Tony Soprano",
-        "image": "../src/Assets/volkswagon/volkswagon-5.jpg",
+        "image": "https://i.ibb.co/r3sWyB2/volkswagon-5.jpg",
         "description": "As for the Jetta, its German name means jet stream."
 
     },
@@ -82,7 +82,7 @@
         "sellerVerified": true,
         "posted": "September 14, 2021",
         "sellerName": "Tony Soprano",
-        "image": "../src/Assets/volkswagon/volkswagon-6.jpg",
+        "image": "https://i.ibb.co/mNPMXyw/volkswagon-6.jpg",
         "description": "The Passat name comes from the German word, passatwinde, which means “trade winds.”"
 
     }

@@ -32,10 +32,10 @@ const Home = () => {
                     <div>Category Card</div>
                     <div>
                         <div className='flex justify-between px-4'>
-                            <p>Volkswagens</p>
+                            <p className='text-lg font-semibold'>Volkswagens</p>
                             <Link>See all</Link>
                         </div>
-                        <div className='flex flex-wrap gap-4'>
+                        <div className='flex flex-wrap gap-3'>
                             {
                                 volkswagens.slice(0, 3).map((Volkswagen, i) => <Card key={i} Volkswagen={Volkswagen}></Card>)
                             }
