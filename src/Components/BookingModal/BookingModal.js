@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
 
-const BookingModal = ({ bookCar }) => {
+const BookingModal = ({ bookCar, setBookCar }) => {
 
     const { user } = useContext(AuthContext)
     const { carName, resalePrice } = bookCar;
@@ -41,6 +41,7 @@ const BookingModal = ({ bookCar }) => {
                 if (data.acknowledged) {
 
                     toast.success("Bookings confirmed")
+                    setBookCar(null)
                     // refetch()
                 }
                 else {
@@ -66,8 +67,8 @@ const BookingModal = ({ bookCar }) => {
                         <input name='name' type="text" value={user?.displayName} disabled className="input input-bordered w-full  my-2" />
                         <input name='email' type="text" value={user?.email} disabled className="input input-bordered w-full my-2" />
                         <input name='price' type="text" placeholder={resalePrice} value={resalePrice} disabled className="input input-bordered w-full my-2" />
-                        <input name='phone' type="text" placeholder="Phone Number" className="input input-bordered w-full my-2" />
-                        <input name='meetingPlace' type="text" placeholder="Meeting Place" className="input input-bordered w-full my-2" />
+                        <input name='phone' type="text" placeholder="Phone Number" className="input input-bordered w-full my-2" required />
+                        <input name='meetingPlace' type="text" placeholder="Meeting Place" className="input input-bordered w-full my-2" required />
                         <button type='submit' className="btn mt-5 w-full">Submit</button>
                     </form>
                 </div>
