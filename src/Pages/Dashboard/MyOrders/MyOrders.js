@@ -10,7 +10,11 @@ const MyOrders = () => {
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
-            const res = await fetch(url);
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('carvanaToken')}`
+                }
+            });
             const data = await res.json();
             return data
         }
@@ -22,7 +26,7 @@ const MyOrders = () => {
             <div className="overflow-x-auto">
                 <table className="table w-full">
 
-                    <thead>
+                    <thead >
                         <tr>
                             <th></th>
                             <th>Car Name</th>
@@ -37,13 +41,13 @@ const MyOrders = () => {
                         {
                             bookings.map((booking,i) =>
                                 <tr key={i}>
-                                    <th>1</th>
+                                    <th>{i+1}</th>
                                     <td>{booking.carName}</td>
-                                    <td>{booking.price}</td>
+                                    <td>$ {booking.price}</td>
                                     <td>{booking.meetingDate}</td>
                                     <td>{booking.meetingPlace}</td>
                                     <td>
-                                        <button className='text-red-500 font-semibold'>Delete</button>
+                                        <button className='text-green-500 font-semibold'>pay</button>
                                     </td>
                                 </tr>)
                         }

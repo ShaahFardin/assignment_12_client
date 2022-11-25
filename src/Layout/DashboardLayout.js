@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Header from '../Pages/Shared/Header/Header';
 
 const DashboardLayout = () => {
@@ -15,8 +15,8 @@ const DashboardLayout = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-primary text-base-300">
                      
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <li><Link to='/dashboard'>My Orders</Link></li>
+                        <li><Link>All Users</Link></li>
                     </ul>
 
                 </div>

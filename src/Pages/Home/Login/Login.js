@@ -32,7 +32,7 @@ const Login = () => {
             .then((result) => {
                 toast.success("Google sign in successfull");
                 setToken(result.user)
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message);
