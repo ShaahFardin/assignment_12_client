@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AllBuggattiCard = ({buggatti}) => {
+const AllBuggattiCard = ({ buggatti, setBookCar }) => {
 
     const { image, location, carName, originalPrice, resalePrice,
         sellerName, sellerVerified, posted, description } = buggatti;
@@ -44,10 +44,11 @@ const AllBuggattiCard = ({buggatti}) => {
                 </div>
 
                 <div className='flex justify-between mt-2'>
-
-                    <button >
-                        <p className='text-xs bg-red-500 px-3 py-1 rounded-sm text-white font-semibold'>Book Now</p>
+                    <button onClick={()=>setBookCar(buggatti)}>
+                        <label htmlFor="Booking-modal"
+                            className="text-xs cursor-pointer bg-red-500 px-3 py-1 rounded-sm text-white font-semibold">Book Now</label>
                     </button>
+
                     <div className='flex justify-center text-xs mt-1'>
                         <div>
                             <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
@@ -63,9 +64,7 @@ const AllBuggattiCard = ({buggatti}) => {
                         </span>
                     </div>
                 </div>
-                <div>
-
-                </div>
+            
             </div>
         </div>
     );
