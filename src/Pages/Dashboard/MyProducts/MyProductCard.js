@@ -1,26 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
-const MyProductCard = ({ product , event}) => {
+const MyProductCard = ({ product, event }) => {
 
     const { carName, brandName, image, price, availabe, _id } = product;
+    const [itemAvailable, setItemAvailable] = useState(true)
 
-    const handleAdvertise = () =>{
+    const handleAdvertise = () => {
 
-        fetch('http://localhost:5000/advertisedProduct', {
+        fetch('http://localhost:5000/shownAddProductCollection', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(product)
         })
-        .then(res=> res.json())
-        .then(data=> {
-            console.log(data);
-            toast.success('Advertisement successfull');
-            event.target.reset()
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success('Advertisement successfull');
+                setItemAvailable(false)
+            })
     }
 
     return (
@@ -55,9 +56,12 @@ const MyProductCard = ({ product , event}) => {
                     <div className='text-xs font-thin'>
                         <span className='mr-1'></span>
                         <button onClick={handleAdvertise} >
-                            { availabe && <p className='text-xs text-green-400 font-semibold'>
-                                Advertise
-                                </p>}
+                            {
+                                itemAvailable &&
+                                <p className='text-xs text-green-400 font-semibold'>
+                                    Advertise
+                                </p>
+                            }
                         </button>
                     </div>
                 </div>
