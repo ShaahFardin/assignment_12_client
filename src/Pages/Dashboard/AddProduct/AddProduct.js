@@ -22,7 +22,8 @@ const AddProduct = () => {
             phone: data.phone,
             selllerName: user?.name,
             email: user?.email,
-            availabe: true
+            availabe: true,
+            constion: data.condition
 
         }
         fetch(`http://localhost:5000/addproduct`, {
@@ -108,6 +109,16 @@ const AddProduct = () => {
                             className="select select-bordered w-full max-w-xs">
                             <option>Volkswagen</option>
                             <option>Buggatti</option>
+                        </select>
+                    </div>
+                    <div className='form-control w-full max-w-xs mt-5'>
+                        <select
+
+                            {...register('condition', { required: "Confirm condition of your car" })}
+                            className="select select-bordered w-full max-w-xs">
+                            <option>Fair</option>
+                            <option>Good</option>
+                            <option>Excelent</option>
                         </select>
                     </div>
                     <input
