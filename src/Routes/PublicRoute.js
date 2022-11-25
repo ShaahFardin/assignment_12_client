@@ -1,6 +1,8 @@
 import AllBuggattiCard from "../Components/Card/AllBuggattiCard";
+import DashboardLayout from "../Layout/DashboardLayout";
 import AllBuggatti from "../Pages/AllBuggatti/AllBuggatti";
 import AllVolkswagen from "../Pages/AllVolkswagen/AllVolkswagen";
+import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
                 element: <PrivateRoute> <AllBuggatti></AllBuggatti></PrivateRoute>
             },
         ]
+    },
+    {
+       path: '/dashboard',
+       element: <PrivateRoute><DashboardLayout/></PrivateRoute> ,
+       children: [
+        {
+            path: '/dashboard',
+            element: <Dashboard></Dashboard>
+        }
+       ]
     }
 ])
 export default router;
