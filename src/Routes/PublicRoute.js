@@ -5,6 +5,7 @@ import AllVolkswagen from "../Pages/AllVolkswagen/AllVolkswagen";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/dashboard/allusers',
-            element: <AllUsers></AllUsers>
+            element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
         }
        ]
     }
