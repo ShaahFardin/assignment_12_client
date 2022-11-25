@@ -3,6 +3,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import AllBuggatti from "../Pages/AllBuggatti/AllBuggatti";
 import AllVolkswagen from "../Pages/AllVolkswagen/AllVolkswagen";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
+import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
 import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
        children: [
         {
             path: '/dashboard',
-            element: <Dashboard></Dashboard>
+            element: <MyOrders></MyOrders>
         }
        ]
     }

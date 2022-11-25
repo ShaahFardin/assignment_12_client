@@ -1,4 +1,4 @@
-import { faCalendarCheck, faCar, faHome, faHospitalUser, faList, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBreadSlice, faCalendarCheck, faCar, faHome, faHospitalUser, faList, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
@@ -25,7 +25,7 @@ const Header = () => {
 
             {user?.uid ?
                 <>
-                    <div className="dropdown dropdown-end cursor-pointer">
+                    <div className="dropdown dropdown-end  cursor-pointer">
                         <div tabIndex={0} className="avatar online">
                             <div className="w-8 ml-3 mt-2 md:w-9 rounded-full">
                                 <img src={user?.photoURL} alt='' />
@@ -55,7 +55,8 @@ const Header = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 text-white shadow rounded-box w-52 ">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 
+                     text-white bg-primary shadow rounded-box w-52 ">
                         {menuItems}
                     </ul>
                 </div>
@@ -66,12 +67,13 @@ const Header = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal items-center text-white p-0">
+                <ul className="menu menu-horizontal items-center bg-primary text-white p-0">
                     {menuItems}
                 </ul>
             </div>
-            <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost  lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost   lg:hidden">
+                <FontAwesomeIcon className='text-white' icon={faBars}></FontAwesomeIcon>
+               
             </label>
         </div>
     );

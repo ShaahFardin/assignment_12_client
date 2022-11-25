@@ -22,7 +22,7 @@ const BookingModal = ({ bookCar, setBookCar }) => {
         const bookingsInfo = {
             carName: carName,
             buyersName: name,
-            buyersEmail: email,
+            email: email,
             price: price,
             buyersNumber: phone,
             meetingPlace: meetingPlace,
