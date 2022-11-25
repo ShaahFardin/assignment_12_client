@@ -16,6 +16,9 @@ const AllUsers = () => {
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/users/${id}`, {
             method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('carvanaToken')}`
+            }
         })
         .then(res=>res.json())
         .then(data=> {
