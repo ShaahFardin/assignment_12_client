@@ -39,9 +39,9 @@ const MyOrders = () => {
                     <tbody>
 
                         {
-                            bookings.map((booking,i) =>
+                            bookings.map((booking, i) =>
                                 <tr key={i}>
-                                    <th>{i+1}</th>
+                                    <th>{i + 1}</th>
                                     <td>{booking.carName}</td>
                                     <td>$ {booking.price}</td>
                                     <td>{booking.meetingDate}</td>

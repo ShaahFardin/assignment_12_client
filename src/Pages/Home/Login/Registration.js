@@ -114,7 +114,9 @@ const Registration = () => {
                     </Link>
                 </p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className="btn btn-outline w-full text-black">Continue with Google</button>
+                <button
+                 onClick={handleGoogleSignIn}
+                  className="btn btn-outline w-full text-black">Continue with Google</button>
             </div>
         </div>
     );
