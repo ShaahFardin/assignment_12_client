@@ -1,6 +1,7 @@
 import AllBuggattiCard from "../Components/Card/AllBuggattiCard";
 import AllBuggatti from "../Pages/AllBuggatti/AllBuggatti";
 import AllVolkswagen from "../Pages/AllVolkswagen/AllVolkswagen";
+import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main");
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/volkswagen',
-                element: <AllVolkswagen/>
+                element: <PrivateRoute><AllVolkswagen/></PrivateRoute>
             },
             {
                 path: '/category/buggatti',

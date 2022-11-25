@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import { setToken } from '../../../Hooks/setToken';
 
@@ -12,7 +12,10 @@ const Login = () => {
 
     const { googleSignIn, loginNewUser } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = data => {
         loginNewUser(data.email, data.password)
@@ -20,12 +23,13 @@ const Login = () => {
                 const user = result.user;
                 setToken(user)
                 toast.success('Login successfull')
+                navigate(from, { replace: true })
             })
     }
-    
+
     const handleGoogleSignIn = () => {
         googleSignIn()
-            .then((result) => {               
+            .then((result) => {
                 toast.success("Google sign in successfull");
                 setToken(result.user)
                 navigate('/')
