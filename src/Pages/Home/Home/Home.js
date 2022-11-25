@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BuggatiCard from '../../../Components/Card/BuggatiCard';
@@ -11,27 +12,46 @@ import Volkswagen from '../Categories/Volkswagen';
 const Home = () => {
 
     const [loading, setLoading] = useState(false);
-    const [buggattis, setBuggattis] = useState([]);
-    const [volkswagens, setVolkswagen] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/category/volkswagen')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setVolkswagen(data)
-            })
-    },[])
+    // const [buggattis, setBuggattis] = useState([]);
+    // const [volkswagens, setVolkswagen] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/category/buggatti')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-               setBuggattis(data)
-            })
-    },[])
 
-    
+
+
+    const { data: volkswagens = [], isLoading } = useQuery({
+        queryKey: ['volkswagen'],
+        queryFn: () => fetch('http://localhost:5000/category/volkswagen')
+            .then(res => res.json())
+    })
+
+    const { data: buggattis = [] } = useQuery({
+        queryKey: ['buggatti'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/category/buggatti');
+            const data = await res.json();
+            return data
+        }
+    })
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/category/volkswagen')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setVolkswagen(data)
+    //         })
+    // },[])
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/category/buggatti')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setBuggattis(data)
+    //         })
+    // }, [])
+
+
 
 
     return (
@@ -65,7 +85,7 @@ const Home = () => {
                         <div className='flex flex-wrap gap-3'>
                             {
                                 buggattis.slice(0, 3).map((buggatti, i) =>
-                                 <BuggatiCard buggatti={buggatti} key={i}></BuggatiCard>)
+                                    <BuggatiCard buggatti={buggatti} key={i}></BuggatiCard>)
                             }
                         </div>
                     </div>

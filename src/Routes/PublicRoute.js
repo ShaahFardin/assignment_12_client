@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/buggatti',
-                element: <AllBuggatti></AllBuggatti>
+                element: <PrivateRoute> <AllBuggatti></AllBuggatti></PrivateRoute>
             },
         ]
     }
