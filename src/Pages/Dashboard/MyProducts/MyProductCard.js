@@ -4,17 +4,26 @@ import { Link } from 'react-router-dom';
 
 const MyProductCard = ({ product, event }) => {
 
-    const { carName, brandName, image, price, availabe, _id } = product;
+    const { carName, brandName, image, resalePrice, availabe, _id, location } = product;
     const [itemAvailable, setItemAvailable] = useState(true)
 
     const handleAdvertise = () => {
+
+        const advertisedProduct = {
+            carName: carName,
+            brandName: brandName,
+            resalePrice: resalePrice,
+            location: location,
+            image: image,
+            availabe: availabe,    
+        }
 
         fetch('http://localhost:5000/shownAddProductCollection', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(advertisedProduct)
         })
             .then(res => res.json())
             .then(data => {
@@ -38,7 +47,7 @@ const MyProductCard = ({ product, event }) => {
             </Link>
             <div className='mt-4'>
                 <h3 className='text-gray-500 text-xs tracking-widest title-font mb-1'>
-
+                    {location}
                 </h3>
 
                 <h2 className='text-gray-900 title-font text-base font-medium'>
@@ -46,7 +55,7 @@ const MyProductCard = ({ product, event }) => {
                 </h2>
 
                 <p className='mt-1 font-thin text-xs'> Resale Price :
-                    <span className='font-bold'> ${price}</span>
+                    <span className='font-bold'> ${resalePrice}</span>
                 </p>
                 <div className='flex justify-between mt-2'>
 

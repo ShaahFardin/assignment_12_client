@@ -8,7 +8,7 @@ const AllBuggatti = () => {
     const [bookCar, setBookCar] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/category/buggatti')
+        fetch('http://localhost:5000/allcars/Bugatti')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

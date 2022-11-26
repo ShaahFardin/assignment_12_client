@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AdvertiseProduct from '../../../Components/Card/AdvertisedProduct/AdvertiseProduct';
 import BuggatiCard from '../../../Components/Card/BuggatiCard';
 import Card from '../../../Components/Card/Card';
 import SearchForm from '../../../Components/Form/SearchForm';
@@ -20,14 +21,25 @@ const Home = () => {
 
     const { data: volkswagens = [], isLoading } = useQuery({
         queryKey: ['volkswagen'],
-        queryFn: () => fetch('http://localhost:5000/category/volkswagen')
+        queryFn: () => fetch('http://localhost:5000/allcars/Volkswagen')
             .then(res => res.json())
     })
 
     const { data: buggattis = [] } = useQuery({
         queryKey: ['buggatti'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/category/buggatti');
+            const res = await fetch('http://localhost:5000/allcars/Bugatti');
+            const data = await res.json();
+            return data
+        }
+    })
+
+
+    // addvertised product
+    const { data: addverisedProduct = [] } = useQuery({
+        queryKey: ['addverisedProduct'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/addverisedProduct');
             const data = await res.json();
             return data
         }
@@ -55,7 +67,7 @@ const Home = () => {
 
 
     return (
-        <div className=''>
+        <div >
             <Banner></Banner>
             <div className='md:flex justify-center gap-10 md:px-10 lg:px-20 mt-20'>
                 <div >
@@ -89,8 +101,23 @@ const Home = () => {
                             }
                         </div>
                     </div>
+                    <div className='mt-20'>
+                        <div className='flex justify-between px-4'>
+                            <p className='text-lg font-semibold'>Advertised Product</p>
+                            <Link to='/category/buggatti'></Link>
+                        </div>
+                        <div className='flex flex-wrap gap-3'>
+                            {
+                                addverisedProduct.map(product => 
+                                <AdvertiseProduct key={product._id} product={product}>
+                                    
+                                </AdvertiseProduct>)
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 };

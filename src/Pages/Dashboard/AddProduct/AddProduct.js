@@ -17,16 +17,18 @@ const AddProduct = () => {
             carName: data.name,
             brandName: data.brandName,
             image: data.image,
-            price: data.price,
-            used: data.used,
+            resalePrice: data.price,
+            location: data.location,
             phone: data.phone,
-            selllerName: user?.name,
+            sellerName: user?.name,
             email: user?.email,
             availabe: true,
-            constion: data.condition
+            constion: data.condition,
+            description: data.description,
+
 
         }
-        fetch(`http://localhost:5000/addproduct`, {
+        fetch(`http://localhost:5000/allcars/${data.brandName}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -76,7 +78,7 @@ const AddProduct = () => {
                         {errors.price && <p className='text-red-500'>Price is required</p>}
                     </div>
 
-                    <div className='form-control w-full max-w-xs'>
+                    {/* <div className='form-control w-full max-w-xs'>
                         <label className="label">
                             <span className="label-text">Year used</span>
                         </label>
@@ -84,13 +86,13 @@ const AddProduct = () => {
                             {...register('used',)}
                             className="input input-bordered w-full max-w-xs" />
 
-                    </div>
+                    </div> */}
                     <div className='form-control w-full max-w-xs'>
                         <label className="label">
-                            <span className="label-text">Your number</span>
+                            <span className="label-text">Your Location</span>
                         </label>
                         <input type="text"
-                            {...register('phone', {required: true})}
+                            {...register('location', {required: true})}
                             className="input input-bordered w-full max-w-xs" />
 
                     </div>
@@ -108,7 +110,7 @@ const AddProduct = () => {
                             {...register('brandName', { required: "Confirm Brandname" })}
                             className="select select-bordered w-full max-w-xs">
                             <option>Volkswagen</option>
-                            <option>Buggatti</option>
+                            <option>Bugatti</option>
                         </select>
                     </div>
                     <div className='form-control w-full max-w-xs mt-5'>

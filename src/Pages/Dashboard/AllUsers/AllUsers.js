@@ -7,7 +7,11 @@ const AllUsers = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users');
+            const res = await fetch('http://localhost:5000/users', {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('carvanaToken')}`
+                }
+            });
             const data = res.json();
             return data;
         }
@@ -20,13 +24,30 @@ const AllUsers = () => {
                 authorization: `bearer ${localStorage.getItem('carvanaToken')}`
             }
         })
-        .then(res=>res.json())
-        .then(data=> {
-            if(data.deletedCount){
-                refetch()
-                toast.success("User Deleted")
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount) {
+                    refetch()
+                    toast.success("User Deleted")
+                }
+            })
+    }
+
+    const handleVerify = (id) => {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('carvanaToken')}`
             }
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.modifiedCount > 0){
+                    toast.success("seeler verified")
+                    refetch()
+                }
+            })
     }
 
     return (
@@ -42,6 +63,7 @@ const AllUsers = () => {
                             <th>Email</th>
                             <th>role</th>
                             <th>Action</th>
+                            <th>Admin Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,10 +75,15 @@ const AllUsers = () => {
                                     <td>{user?.email}</td>
                                     <td>{user?.role}</td>
                                     <td className='text-red-500'>
-                                        <button onClick={()=>handleDelete(user._id)}>
-                                           Delete
+                                        <button onClick={() => handleDelete(user._id)}>
+                                            Delete
                                         </button>
                                     </td>
+                                    {
+                                        user?.verified !== true && <td onClick={() => handleVerify(user._id)}>
+                                            <button>verify</button>
+                                        </td>
+                                    }
                                 </tr>)
                         }
 

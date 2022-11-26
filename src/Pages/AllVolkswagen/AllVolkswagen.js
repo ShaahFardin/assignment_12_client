@@ -8,7 +8,7 @@ const AllVolkswagen = () => {
     const [bookCar, setBookCar] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/category/volkswagen')
+        fetch('http://localhost:5000/allcars/Volkswagen')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
