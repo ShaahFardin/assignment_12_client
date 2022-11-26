@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const AdvertiseProduct = ({product}) => {
+const AdvertiseProduct = ({ product }) => {
     return (
         <div className="card w-60 glass">
             <figure><img src={product?.image} alt="car!" /></figure>
@@ -8,7 +9,9 @@ const AdvertiseProduct = ({product}) => {
                 <h2 className="card-title">{product?.carName}</h2>
                 <p>Price : {product?.resalePrice}</p>
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary">Book now!</button>
+                    <button className="btn btn-primary">
+                        <Link to='/category/volkswagen'>Book Now</Link>
+                    </button>
                 </div>
             </div>
         </div>

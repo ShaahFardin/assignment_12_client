@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
-const MyProductCard = ({ product, event }) => {
+const MyProductCard = ({ product, refetch }) => {
 
     const { carName, brandName, image, resalePrice, availabe, _id, location } = product;
     const [itemAvailable, setItemAvailable] = useState(true)
@@ -33,6 +33,17 @@ const MyProductCard = ({ product, event }) => {
             })
     }
 
+    const handleDeleteProducts = id =>{
+        fetch(`http://localhost:5000/allcars/${id}`, {
+            method: 'DELETE'
+        })
+        .then( res => res.json())
+        .then( data =>{
+            toast.success("Product Deleted Successfully")
+            refetch();
+        })
+    }
+
     return (
         <div className='lg:w-96 md:w-1/2 p-4 w-full'>
             <Link
@@ -59,7 +70,7 @@ const MyProductCard = ({ product, event }) => {
                 </p>
                 <div className='flex justify-between mt-2'>
 
-                    <button >
+                    <button onClick={()=>handleDeleteProducts(_id)}>
                         <p className='text-xs text-orange-400 font-semibold'>Delete</p>
                     </button>
                     <div className='text-xs font-thin'>

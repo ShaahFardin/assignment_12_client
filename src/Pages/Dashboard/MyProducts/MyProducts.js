@@ -5,11 +5,11 @@ import MyProductCard from './MyProductCard';
 
 const MyProducts = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const url = `http://localhost:5000/allcars?email=${user?.email}`;
 
-    const { data: myproducts = [] } = useQuery({
+    const { data: myproducts = [], refetch } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -24,13 +24,14 @@ const MyProducts = () => {
 
     return (
         <div>
-            <h1 className='text-3xl tracking-wider'>My Products {myproducts.length}</h1>
+            <h1 className='text-3xl font-semibold tracking-wider text-gray-500'>My Products</h1>
             <div>
                 {
-                   myproducts.map(product =>
-                     <MyProductCard key={product._id}  product={product}>
+                    myproducts.map(product =>
+                        <MyProductCard
+                            key={product._id} refetch={refetch} product={product}>
 
-                     </MyProductCard>) 
+                        </MyProductCard>)
                 }
             </div>
         </div>
