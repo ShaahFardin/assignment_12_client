@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "carName": "Nissan Titan",
+        "brandName": "Nissan",
+        "originalPrice": 34499,
+        "resalePrice":24000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Elon Musk",
+        "image": "https://i.ibb.co/YBCRrfj/I5GmLY.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+        "id":2,
+        "carName": "2018 Nissan Titan XD ",
+        "brandName": "Nissan",
+        "originalPrice": 34499,
+        "resalePrice":24000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/s3xWQhV/GREjru.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+        "id":3,
+        "carName": "2023 Nissan Frontier Crew Cab ",
+        "brandName": "Nissan",
+        "originalPrice": 24499,
+        "resalePrice":4000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Ratan Tate",
+        "image": "https://i.ibb.co/gd7BzyB/2017-Nissan-Navara-Tekna-DCi-2-3-Front.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+        "id":4,
+        "carName": "2023 Nissan Frontier Crew Cab ",
+        "brandName": "Nissan",
+        "originalPrice": 24499,
+        "resalePrice":4000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Ratan Tata",
+        "image": "https://cdn.motor1.com/images/mgl/EMOMR/s1/nissan-navara-off-roader-at32.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    }
+]

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AdvertiseProduct from '../../../Components/Card/AdvertisedProduct/AdvertiseProduct';
 import BuggatiCard from '../../../Components/Card/BuggatiCard';
 import Card from '../../../Components/Card/Card';
+import NissanCard from '../../../Components/Card/NissanCard';
 import SearchForm from '../../../Components/Form/SearchForm';
 import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
@@ -29,6 +30,14 @@ const Home = () => {
         queryKey: ['buggatti'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/allcars/Bugatti');
+            const data = await res.json();
+            return data
+        }
+    })
+    const { data: nissans = [] } = useQuery({
+        queryKey: ['Nissan'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/allcars/Nissan');
             const data = await res.json();
             return data
         }
@@ -83,7 +92,8 @@ const Home = () => {
                         </div>
                         <div className='flex flex-wrap gap-3'>
                             {
-                                volkswagens.slice(0, 3).map((Volkswagen, i) => <Card key={i} Volkswagen={Volkswagen}></Card>)
+                                volkswagens.slice(0, 3).map((Volkswagen, i) =>
+                                 <Card key={i} Volkswagen={Volkswagen}></Card>)
                             }
                         </div>
                     </div>
@@ -101,6 +111,24 @@ const Home = () => {
                             }
                         </div>
                     </div>
+
+                    {/* Nissan car category */}
+
+                    <div className='mt-20'>
+                        <div className='flex justify-between px-4'>
+                            <p className='text-lg font-semibold'>Buggati</p>
+                            <Link to='/category/buggatti'>See all</Link>
+                        </div>
+                        <div className='flex flex-wrap gap-3'>
+                            {
+                                nissans.slice(0, 3).map((nissan, i) =>
+                                    <NissanCard nissan={nissan} key={i}></NissanCard>)
+                            }
+                        </div>
+                    </div>
+
+
+
                     <div className='mt-20'>
                         <div className='flex justify-between px-4'>
                             <p className='text-lg font-semibold'>Advertised Product</p>
@@ -108,10 +136,10 @@ const Home = () => {
                         </div>
                         <div className='flex flex-wrap gap-3'>
                             {
-                                addverisedProduct.map(product => 
-                                <AdvertiseProduct key={product._id} product={product}>
-                                    
-                                </AdvertiseProduct>)
+                                addverisedProduct.map(product =>
+                                    <AdvertiseProduct key={product._id} product={product}>
+
+                                    </AdvertiseProduct>)
                             }
                         </div>
                     </div>

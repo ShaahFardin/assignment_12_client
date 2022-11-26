@@ -1,0 +1,256 @@
+[
+    {
+       
+        "carName": "Volkswagen Atlas",
+        "brandName": "Volkswagen",
+        "originalPrice": 32999,
+        "resalePrice":26000,
+        "location": "Frankfurt, Germany",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2021",
+        "sellerName": "Belal Ahmed",
+        "image": "https://i.ibb.co/crrJ5QZ/volkswagon-1.jpg",
+        "description": "A midsize, family-friendly SUV, the Atlas can drive up to seven passengers and essentials on the Huntington roads. This SUV is more than capable just like Atlas, the titan who carries the Earth on his shoulders."
+    },
+    {
+       
+        "carName": "Volkswagen ID.4",
+        "brandName": "Volkswagen",
+        "originalPrice": 30999,
+        "resalePrice":22000,
+        "location": "Daggendorf, Germany",
+        "usedYear": 5,
+        "sellerVerified": false,
+        "posted": "February 14, 2019",
+        "sellerName": "Thomas Muller",
+        "image": "https://i.ibb.co/LRc0NBt/volkswagon-2.jpg",
+        "description": "After the ID.3., the ID.4 is the first all-electric SUV that has been making waves in the EV market. Intelligent design, identity, and visionary technologies: you can find the future in the ID.4."
+    },
+    {
+      
+        "carName": "Volkswagen Arteon",
+        "brandName": "Volkswagen",
+        "originalPrice": 23999,
+        "resalePrice":20000,
+        "location": "Munchen, Germany",
+        "usedYear": 5,
+        "sellerVerified": true,
+        "posted": "September 14, 2022",
+        "sellerName": "Atik Ahmed",
+        "image": "https://i.ibb.co/bLLfxN9/volkswagon-3.jpg",
+        "description": "The Arteon is breathtaking with its distinguished design and style, so it’s no wonder that its name derives from the Latin word, Artem, meaning art. Drivers and our team at Platinum Volkswagen who have seen the Arteon in person would agree its design is a work of art."
+    },
+    {
+        
+        "carName": "Volkswagen Golf",
+        "brandName": "Volkswagen",
+        "originalPrice": 23999,
+        "resalePrice":20000,
+        "location": "Munchen, Germany",
+        "usedYear": 3,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Manuel Nauer",
+        "image": "https://i.ibb.co/zJVGdjz/volkswagon-4.jpg",
+        "description": "Volkswagen named three vehicles— Golf, Jetta, and Passat— after natural occurrences. The Volkswagen Golf is named after the German word “goldstrom,” meaning gulf stream."
+
+    },
+    {
+      
+        "carName": "Volkswagen Jetta",
+        "brandName": "Volkswagen",
+        "originalPrice": 19999,
+        "resalePrice":15000,
+        "location": "Milano, Itali",
+        "usedYear": 6,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Tony Soprano",
+        "image": "https://i.ibb.co/r3sWyB2/volkswagon-5.jpg",
+        "description": "As for the Jetta, its German name means jet stream."
+
+    },
+    {
+       
+        "carName": "Volkswagen Passat",
+        "brandName": "Volkswagen",
+        "originalPrice": 19999,
+        "resalePrice":15000,
+        "location": "Milano, Itali",
+        "usedYear": 6,
+        "sellerVerified": true,
+        "posted": "September 14, 2021",
+        "sellerName": "Tony Soprano",
+        "image": "https://i.ibb.co/mNPMXyw/volkswagon-6.jpg",
+        "description": "The Passat name comes from the German word, passatwinde, which means “trade winds.”"
+
+    },
+    {
+        "carName": "Bugatti Chiron",
+        "brandName": "Bugatti",
+        "originalPrice": 3442999,
+        "resalePrice":226000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/FnwTgHh/andrew-tate-bugatti.webp",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+        
+        "carName": "Bugatti Chiron Sport 110 ",
+        "brandName": "Bugatti",
+        "originalPrice": 32999,
+        "resalePrice":26000,
+        "location": "Brentford, England",
+        "usedYear": 2,
+        "sellerVerified": true,
+        "posted": "Novembar 23, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/Yfz9L81/andrew-tate-buggati-2.jpg",
+        "description": "This special edition Chiron Sport is called the It's designed to honor the car company's 110 anniversary and its French heritage"
+    },
+    {
+        
+        "carName": "Bugatti Centodieci ",
+        "brandName": "Bugatti",
+        "originalPrice": 112999,
+        "resalePrice":45000,
+        "location": "Brentford, England",
+        "usedYear": 4,
+        "sellerVerified": false,
+        "posted": "Novembar 23, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/Wzmc30L/buggatti-7.jpg",
+        "description": "The Bugatti Centodieci is the brands homage to one of its most iconic supercars of all time, the EB110. Images of the Centodieci were leaked ahead of the launch of the car and rumors have spread before the reveal"
+    },
+    {
+  
+        "carName": "Bugatti La Voiture Noire",
+        "brandName": "Bugatti",
+        "originalPrice": 112999,
+        "resalePrice":45000,
+        "location": "Brentford, England",
+        "usedYear": 3,
+        "sellerVerified": true,
+        "posted": "December 18, 2022",
+        "sellerName": "Tristane Tate",
+        "image": "https://i.ibb.co/1zLL1pK/buggatti-1.jpg",
+        "description": "The Bugatti Centodieci is the brand’s homage to one of its most iconic supercars of all time, the EB110. Images of the Centodieci were leaked ahead of the launch of the car and rumors have spread before the reveal"
+    },
+    {
+   
+        "carName": "Bugatti Chiron Edition Noire",
+        "brandName": "Bugatti",
+        "originalPrice": 562999,
+        "resalePrice":45000,
+        "location": "Manchester, England",
+        "usedYear": 5,
+        "sellerVerified": true,
+        "posted": "February 14, 2022",
+        "sellerName": "Tristane Tate",
+        "image": "https://i.ibb.co/NTbT1FG/buggatti-3.webp",
+        "description": "The Bugatti Chiron Noire Sportive features a matte carbon fiber exterior and a matte finish on anything that isn’t carbon fiber"
+    },
+    {
+       
+        "carName": "Bugatti Bolide",
+        "brandName": "Bugatti",
+        "originalPrice": 362999,
+        "resalePrice":67000,
+        "location": "Manchester, England",
+        "usedYear": 8,
+        "sellerVerified": false,
+        "posted": "December 18, 2022",
+        "sellerName": "Tristane Tate",
+        "image": "https://i.ibb.co/NTbT1FG/buggatti-3.webp",
+        "description": "The Bugatti Chiron Noire Sportive features a matte carbon fiber exterior and a matte finish on anything that isn’t carbon fiber"
+    },
+    {
+       
+        "carName": "Bugatti Chiron L’Ébé",
+        "brandName": "Bugatti",
+        "originalPrice": 772999,
+        "resalePrice":67000,
+        "location": "Manchester, England",
+        "usedYear": 2,
+        "sellerVerified": false,
+        "posted": "September 18, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/sgShDFf/buggatti-8.jpg",
+        "description": "The Bugatti Chiron Noire Sportive features a matte carbon fiber exterior and a matte finish on anything that isn’t carbon fiber"
+    },
+    {
+        "id":8,
+        "carName": "Bugatti Veyron",
+        "brandName": "Bugatti",
+        "originalPrice": 5672999,
+        "resalePrice":647000,
+        "location": "Manchester, England",
+        "usedYear": 2,
+        "sellerVerified": false,
+        "posted": "March 28, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/sgShDFf/buggatti-8.jpg",
+        "description": "The Bugatti Chiron Noire Sportive features a matte carbon fiber exterior and a matte finish on anything that isn’t carbon fiber"
+    },
+     {
+       
+        "carName": "Nissan Titan",
+        "brandName": "Nissan",
+        "originalPrice": 34499,
+        "resalePrice":24000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Elon Musk",
+        "image": "https://i.ibb.co/YBCRrfj/I5GmLY.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+       
+        "carName": "2018 Nissan Titan XD ",
+        "brandName": "Nissan",
+        "originalPrice": 34499,
+        "resalePrice":24000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Andrew Tate",
+        "image": "https://i.ibb.co/s3xWQhV/GREjru.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+     
+        "carName": "2023 Nissan Frontier Crew Cab ",
+        "brandName": "Nissan",
+        "originalPrice": 24499,
+        "resalePrice":4000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Ratan Tate",
+        "image": "https://i.ibb.co/gd7BzyB/2017-Nissan-Navara-Tekna-DCi-2-3-Front.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    },
+    {
+      
+        "carName": "2023 Nissan Frontier Crew Cab ",
+        "brandName": "Nissan",
+        "originalPrice": 24499,
+        "resalePrice":4000,
+        "location": "Liverpool, England",
+        "usedYear": 4,
+        "sellerVerified": true,
+        "posted": "January 4, 2022",
+        "sellerName": "Ratan Tata",
+        "image": "https://cdn.motor1.com/images/mgl/EMOMR/s1/nissan-navara-off-roader-at32.jpg",
+        "description": "The 8-litre W16 from the Veyron is no bad place to start from that perspective; that car had no shortage of power, producing 1183bhp in SuperSports configuration at launch, the fastest production car in the world."
+    }
+]
