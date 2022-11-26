@@ -35,7 +35,10 @@ const MyProductCard = ({ product, refetch }) => {
 
     const handleDeleteProducts = id =>{
         fetch(`http://localhost:5000/allcars/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers:{
+                authorization: `bearer ${localStorage.getItem('carvanaToken')}`
+            }
         })
         .then( res => res.json())
         .then( data =>{
