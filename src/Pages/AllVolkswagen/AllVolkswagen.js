@@ -24,7 +24,8 @@ const AllVolkswagen = () => {
                     volkswagens.map((Volkswagen, i) =>
                         <VolkswagenCard
                             key={i}
-                            setBookCar={setBookCar} Volkswagen={Volkswagen}>
+                            setBookCar={setBookCar}
+                            Volkswagen={Volkswagen}>
                         </VolkswagenCard>)
                 }
             </div>

@@ -117,7 +117,7 @@ const Home = () => {
                     <div className='mt-20'>
                         <div className='flex justify-between px-4'>
                             <p className='text-lg font-semibold'>Buggati</p>
-                            <Link to='/category/buggatti'>See all</Link>
+                            <Link to='/category/nissan'>See all</Link>
                         </div>
                         <div className='flex flex-wrap gap-3'>
                             {

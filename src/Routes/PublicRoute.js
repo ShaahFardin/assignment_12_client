@@ -1,5 +1,6 @@
 import DashboardLayout from "../Layout/DashboardLayout";
 import AllBuggatti from "../Pages/AllBuggatti/AllBuggatti";
+import AllTrucks from "../Pages/AllTrucks/AllTrucks";
 import AllVolkswagen from "../Pages/AllVolkswagen/AllVolkswagen";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: '/category/buggatti',
                 element: <PrivateRoute> <AllBuggatti></AllBuggatti></PrivateRoute>
+            },
+            {
+                path: '/category/nissan',
+                element: <PrivateRoute> <AllTrucks></AllTrucks></PrivateRoute>
             },
         ]
     },
