@@ -73,7 +73,7 @@ const Login = () => {
                     <input className='btn btn-accent w-full' value="Login" type="submit" />
                 </form>
                 <p>New to Doctors Portal?
-                    <Link to='/register' className='text-primary underline'>
+                    <Link to='/registration' className='text-primary underline'>
                         Create new account
                     </Link>
                 </p>

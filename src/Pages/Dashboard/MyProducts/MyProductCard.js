@@ -48,7 +48,7 @@ const MyProductCard = ({ product, refetch }) => {
     }
 
     return (
-        <div className='lg:w-96 md:w-1/2 p-4 w-full'>
+        <div className='lg:w-80 md:w-1/2 p-4 w-full'>
             <Link
 
                 className='block relative h-32 rounded overflow-hidden'

@@ -25,12 +25,13 @@ const MyProducts = () => {
     return (
         <div>
             <h1 className='text-3xl font-semibold tracking-wider text-gray-500'>My Products</h1>
-            <div>
+            <div className='md:flex flex-wrap'>
                 {
                     myproducts.map(product =>
                         <MyProductCard
-                            key={product._id} refetch={refetch} product={product}>
-
+                            key={product._id}
+                            refetch={refetch}
+                            product={product}>
                         </MyProductCard>)
                 }
             </div>

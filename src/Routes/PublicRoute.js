@@ -6,7 +6,9 @@ import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
 import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 import Blogs from "../Pages/Home/Blogs/Blogs";
+import DisplayError from "../Pages/Shared/DisplayError/DisplayError";
 import PrivateRoute from "./PrivateRoute";
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main");
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <DisplayError/>,
         children: [
             {
                 path: '/',
@@ -54,6 +57,7 @@ const router = createBrowserRouter([
     {
        path: '/dashboard',
        element: <PrivateRoute><DashboardLayout/></PrivateRoute> ,
+       errorElement: <DisplayError/>,
        children: [
         {
             path: '/dashboard',
@@ -70,6 +74,11 @@ const router = createBrowserRouter([
         {
             path: '/dashboard/myproducts',
             element: <MyProducts></MyProducts>
+        },
+        {
+            path: '/dashboard/payment/:id',
+            loader: ({params})=> fetch(`http://localhost:5000/bookings/${params.id}`),
+            element: <Payment></Payment>
         }
        ]
     }

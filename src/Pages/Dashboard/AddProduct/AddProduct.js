@@ -112,6 +112,7 @@ const AddProduct = () => {
                             className="select select-bordered w-full max-w-xs">
                             <option>Volkswagen</option>
                             <option>Bugatti</option>
+                            <option>Nissan</option>
                         </select>
                     </div>
                     <div className='form-control w-full max-w-xs mt-5'>

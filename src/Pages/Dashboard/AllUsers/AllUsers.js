@@ -43,7 +43,7 @@ const AllUsers = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.modifiedCount > 0){
+                if (data.modifiedCount > 0) {
                     toast.success("seeler verified")
                     refetch()
                 }
@@ -74,14 +74,14 @@ const AllUsers = () => {
                                     <th>{i + 1}</th>
                                     <td>{user?.email}</td>
                                     <td>{user?.role}</td>
-                                    <td className='text-red-500'>
+                                    <td className='text-red-500 font-semibold'>
                                         <button onClick={() => handleDelete(user._id)}>
                                             Delete
                                         </button>
                                     </td>
                                     {
                                         user?.verified !== true && <td onClick={() => handleVerify(user._id)}>
-                                            <button>verify</button>
+                                            <button className='text-green-500 font-semibold'>verify</button>
                                         </td>
                                     }
                                 </tr>)
