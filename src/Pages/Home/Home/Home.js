@@ -1,26 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import AdvertiseProduct from '../../../Components/Card/AdvertisedProduct/AdvertiseProduct';
 import BuggatiCard from '../../../Components/Card/BuggatiCard';
 import Card from '../../../Components/Card/Card';
 import NissanCard from '../../../Components/Card/NissanCard';
 import SearchForm from '../../../Components/Form/SearchForm';
-import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
-import Categories from '../Categories/Categories';
-import Volkswagen from '../Categories/Volkswagen';
 
 const Home = () => {
 
-    const [loading, setLoading] = useState(false);
-    // const [buggattis, setBuggattis] = useState([]);
-    // const [volkswagens, setVolkswagen] = useState([]);
-
-
-
-
-    const { data: volkswagens = [], isLoading } = useQuery({
+    const { data: volkswagens = [] } = useQuery({
         queryKey: ['volkswagen'],
         queryFn: () => fetch('https://server-ivory-alpha.vercel.app/allcars/Volkswagen')
             .then(res => res.json())
@@ -34,6 +24,7 @@ const Home = () => {
             return data
         }
     })
+
     const { data: nissans = [] } = useQuery({
         queryKey: ['Nissan'],
         queryFn: async () => {
@@ -42,7 +33,6 @@ const Home = () => {
             return data
         }
     })
-
 
     // addvertised product
     const { data: addverisedProduct = [] } = useQuery({
@@ -53,26 +43,6 @@ const Home = () => {
             return data
         }
     })
-
-    // useEffect(() => {
-    //     fetch('https://server-ivory-alpha.vercel.app/category/volkswagen')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setVolkswagen(data)
-    //         })
-    // },[])
-
-    // useEffect(() => {
-    //     fetch('https://server-ivory-alpha.vercel.app/category/buggatti')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setBuggattis(data)
-    //         })
-    // }, [])
-
-
 
 
     return (
@@ -126,9 +96,6 @@ const Home = () => {
                             }
                         </div>
                     </div>
-
-
-
                     <div className='mt-20'>
                         <div className='flex justify-between px-4'>
                             <p className='text-lg font-semibold'>Advertised Product</p>
