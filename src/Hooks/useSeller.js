@@ -5,7 +5,7 @@ const useSeller = email =>{
 
     useEffect(()=>{
         if(email){
-            fetch(`http://localhost:5000/users/seller/${email}`,{
+            fetch(`https://server-ivory-alpha.vercel.app/users/seller/${email}`,{
                 headers: {
                     authorization: `bearer ${localStorage.getItem('carvanaToken')}`
                 }

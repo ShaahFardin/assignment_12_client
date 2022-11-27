@@ -18,7 +18,7 @@ const MyProductCard = ({ product, refetch }) => {
             availabe: availabe,    
         }
 
-        fetch('http://localhost:5000/shownAddProductCollection', {
+        fetch('https://server-ivory-alpha.vercel.app/shownAddProductCollection', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +34,7 @@ const MyProductCard = ({ product, refetch }) => {
     }
 
     const handleDeleteProducts = id =>{
-        fetch(`http://localhost:5000/allcars/${id}`, {
+        fetch(`https://server-ivory-alpha.vercel.app/allcars/${id}`, {
             method: 'DELETE',
             headers:{
                 authorization: `bearer ${localStorage.getItem('carvanaToken')}`

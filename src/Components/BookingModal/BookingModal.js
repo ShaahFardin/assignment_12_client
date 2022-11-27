@@ -29,7 +29,7 @@ const BookingModal = ({ bookCar, setBookCar }) => {
             meetingDate: meetingDate,
             buyersImage: user?.photoURL,
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://server-ivory-alpha.vercel.app/bookings', {
             method: "POST",
             headers: {
                 'content-type': "application/json",

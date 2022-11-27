@@ -9,7 +9,7 @@ const AllTrucks = () => {
     const [bookCar, setBookCar] = useState(null);
     
     useEffect(() => {
-        fetch('http://localhost:5000/allcars/Nissan')
+        fetch('https://server-ivory-alpha.vercel.app/allcars/Nissan')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

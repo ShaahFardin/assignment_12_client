@@ -22,14 +22,14 @@ const Home = () => {
 
     const { data: volkswagens = [], isLoading } = useQuery({
         queryKey: ['volkswagen'],
-        queryFn: () => fetch('http://localhost:5000/allcars/Volkswagen')
+        queryFn: () => fetch('https://server-ivory-alpha.vercel.app/allcars/Volkswagen')
             .then(res => res.json())
     })
 
     const { data: buggattis = [] } = useQuery({
         queryKey: ['buggatti'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allcars/Bugatti');
+            const res = await fetch('https://server-ivory-alpha.vercel.app/allcars/Bugatti');
             const data = await res.json();
             return data
         }
@@ -37,7 +37,7 @@ const Home = () => {
     const { data: nissans = [] } = useQuery({
         queryKey: ['Nissan'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allcars/Nissan');
+            const res = await fetch('https://server-ivory-alpha.vercel.app/allcars/Nissan');
             const data = await res.json();
             return data
         }
@@ -48,14 +48,14 @@ const Home = () => {
     const { data: addverisedProduct = [] } = useQuery({
         queryKey: ['addverisedProduct'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/addverisedProduct');
+            const res = await fetch('https://server-ivory-alpha.vercel.app/addverisedProduct');
             const data = await res.json();
             return data
         }
     })
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/category/volkswagen')
+    //     fetch('https://server-ivory-alpha.vercel.app/category/volkswagen')
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);
@@ -64,7 +64,7 @@ const Home = () => {
     // },[])
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/category/buggatti')
+    //     fetch('https://server-ivory-alpha.vercel.app/category/buggatti')
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);

@@ -28,7 +28,7 @@ const AddProduct = () => {
 
 
         }
-        fetch(`http://localhost:5000/allcars/${data.brandName}`, {
+        fetch(`https://server-ivory-alpha.vercel.app/allcars/${data.brandName}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

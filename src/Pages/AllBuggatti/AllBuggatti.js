@@ -8,7 +8,7 @@ const AllBuggatti = () => {
     const [bookCar, setBookCar] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allcars/Bugatti')
+        fetch('https://server-ivory-alpha.vercel.app/allcars/Bugatti')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

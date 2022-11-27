@@ -7,7 +7,7 @@ const MyProducts = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/allcars?email=${user?.email}`;
+    const url = `https://server-ivory-alpha.vercel.app/allcars?email=${user?.email}`;
 
     const { data: myproducts = [], refetch } = useQuery({
         queryKey: ['bookings', user?.email],

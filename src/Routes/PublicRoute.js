@@ -77,7 +77,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/dashboard/payment/:id',
-            loader: ({params})=> fetch(`http://localhost:5000/bookings/${params.id}`),
+            loader: ({params})=> fetch(`https://server-ivory-alpha.vercel.app/bookings/${params.id}`),
             element: <Payment></Payment>
         }
        ]
