@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
@@ -79,15 +79,6 @@ const AddProduct = () => {
                         {errors.price && <p className='text-red-500'>Price is required</p>}
                     </div>
 
-                    {/* <div className='form-control w-full max-w-xs'>
-                        <label className="label">
-                            <span className="label-text">Year used</span>
-                        </label>
-                        <input type="text"
-                            {...register('used',)}
-                            className="input input-bordered w-full max-w-xs" />
-
-                    </div> */}
                     <div className='form-control w-full max-w-xs'>
                         <label className="label">
                             <span className="label-text">Your Location</span>
