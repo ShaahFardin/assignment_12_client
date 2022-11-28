@@ -1,4 +1,4 @@
-import { faBars, faBreadSlice, faCalendarCheck, faCar, faHome, faHospitalUser, faList, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCar, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
@@ -61,6 +61,7 @@ const Header = () => {
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl tracking-wider">
                     <p className=' text-white'>
+                        <FontAwesomeIcon className='mr-2' icon={faCar}></FontAwesomeIcon>
                         CARVANA
                     </p>
                 </Link>

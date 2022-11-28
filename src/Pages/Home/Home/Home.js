@@ -6,6 +6,7 @@ import BuggatiCard from '../../../Components/Card/BuggatiCard';
 import Card from '../../../Components/Card/Card';
 import NissanCard from '../../../Components/Card/NissanCard';
 import SearchForm from '../../../Components/Form/SearchForm';
+import Slider from '../../../Components/Slider/Slider';
 import Banner from '../Banner/Banner';
 
 const Home = () => {
@@ -48,6 +49,7 @@ const Home = () => {
     return (
         <div >
             <Banner></Banner>
+            <Slider></Slider>
             <div className='md:flex justify-center gap-10 md:px-10 lg:px-20 mt-20'>
                 <div >
                     <SearchForm />
