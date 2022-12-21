@@ -103,7 +103,7 @@ const Home = () => {
                             <p className='text-lg font-semibold'>Advertised Product</p>
                             <Link to='/category/buggatti'></Link>
                         </div>
-                        <div className='flex flex-wrap gap-3'>
+                        <div className='md:grid grid-cols-3 gap-4'>
                             {
                                 addverisedProduct.map(product =>
                                     <AdvertiseProduct key={product._id} product={product}>

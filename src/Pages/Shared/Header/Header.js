@@ -17,16 +17,16 @@ const Header = () => {
     const menuItems =
         <>
             <>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/blogs'>Blogs</Link></li>     
-                <li><Link to='/registration'>Registration</Link></li>
+                <li className='hover:bg-white hover:text-black hover:transition-all'><Link to='/'>Home</Link></li>
+                <li className='hover:bg-white hover:text-black hover:transition-all'><Link to='/blogs'>Blogs</Link></li>     
+                <li className='hover:bg-white hover:text-black hover:transition-all'><Link to='/registration'>Registration</Link></li>
             </>
 
             {user?.uid ?
                 <>
                     <div className="dropdown dropdown-end  cursor-pointer">
                         <div tabIndex={0} className="avatar online">
-                            <div className="w-8 ml-3 mt-2 md:w-9 rounded-full">
+                            <div className="w-8 ml-3 mt-2 md:w-14 rounded-full">
                                 <img src={user?.photoURL} alt='' />
                             </div>
                         </div>
@@ -55,11 +55,11 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 
-                     text-white bg-primary shadow rounded-box w-52 ">
+                     text-white text-xl bg-primary shadow rounded-box w-52 ">
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl tracking-wider">
+                <Link to='/' className="btn btn-ghost normal-case text-2xl tracking-wider">
                     <p className=' text-white'>
                         <FontAwesomeIcon className='mr-2' icon={faCar}></FontAwesomeIcon>
                         CARVANA
@@ -67,7 +67,7 @@ const Header = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal items-center bg-primary text-white p-0">
+                <ul className="menu menu-horizontal items-center bg-primary text-xl  text-white p-0">
                     {menuItems}
                 </ul>
             </div>

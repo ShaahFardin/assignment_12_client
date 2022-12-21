@@ -44,7 +44,7 @@ const VolkswagenCard = ({ Volkswagen, setBookCar }) => {
                 <div className='flex justify-between mt-2'>
                     <button onClick={()=>setBookCar(Volkswagen)}>
                         <label htmlFor="Booking-modal" 
-                        className="text-xs cursor-pointer bg-red-500 px-3 py-1 rounded-sm text-white font-semibold">Book Now</label>
+                        className=" bg-blue-600 rounded-sm px-5 py-2 shadow-md text-white cursor-pointer font-semibold">BOOK NOW</label>
                     </button>
                     <div className='flex justify-center text-xs mt-1'>
                         <div>

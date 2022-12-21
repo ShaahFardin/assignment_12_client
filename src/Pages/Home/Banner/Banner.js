@@ -1,9 +1,9 @@
 import React from 'react';
-import HomeBanner from '../../../../src/Assets/banner-image.jpg'
+
 
 const Banner = () => {
     return (
-        <div className="hero h-[600px]" style={{ backgroundImage: `url(${HomeBanner})` }}>
+        <div className="hero h-[600px]" style={{ backgroundImage: `url(https://mclaren.scene7.com/is/image/mclaren/McLarenArtura-16:crop-16x9?wid=1980&hei=1114)` }}>
             <div className="hero-overlay bg-opacity-70"></div>
             <div className="hero-content text-center text-base-100">
                 <div className="max-w-md">
